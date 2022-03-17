@@ -1,0 +1,22 @@
+import os
+from celery import Celery
+
+
+
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_project.settings')
+
+app = Celery('django_project')
+
+app.config_from_object('django.conf:settings', namespace='CELERY')
+
+#app.autodiscover_tasks()
+
+@app.task(bind=True)
+def debug_task(self):
+    print(f'Request: {self.request!r}')
+
+
+@app.task(bind=True)
+def hello_world(self):
+    print('Hello world!')
