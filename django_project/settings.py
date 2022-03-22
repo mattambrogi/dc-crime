@@ -31,6 +31,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Tweepy token
+BEARER_TOKEN = env.str("BEARER_TOKEN")
+
 
 # Application definition
 

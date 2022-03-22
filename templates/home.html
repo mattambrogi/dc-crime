@@ -1,8 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container-fluid px-5">
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <h2 class="mt-3 text-light">D.C. Crime Statistics</h2>
+            <div class="card mt-5" style="width: 18rem; background-color: 393D47; border:1px solid #000;">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Reported shootings year to date:</h6>
+                    <h1 class="card-title text-white">{{num_shootings}}</h1>
+                    <h6 class="card-title text-white">{{monthly_shootings}} / month avg</h6>
+                </div>
+            </div>
+            <div class="card mt-5 mb-5" style="width: 18rem; background-color: 393D47; border:1px solid #000;">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Reported robberies year to date:</h6>
+                    <h1 class="card-title text-white">{{num_robberies}}</h1>
+                    <h6 class="card-title text-white">{{monthly_robberies}} / month avg</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 text-light">
+            <h3 class="mt-3 ">About</h3>
+            <p class="mt-5">
+                Annual homicides have almost doubled in DC in the past 5 years. This simple web page is
+                intended to bring greater transparency to this issue.
+            </p>
+            <p>
+                The numbers displayed on this page are derived by collecting alerts sent out by
+                the DC Police Department on Twitter. They are aggregated daily and shown here only as a means of greater
+                transparency.
+                For official stats please visit the Metropolitan Police Deparment's offical website.
+            </p>
+            <p>
+                Last updated: {{most_recent_date}}
+            </p>
 
-<h2>Home Page</h2>
-<h3>Number of shootings: {{ num_shootings }}</h3>
+        </div>
+        <div class="col-md-4 col-sm-12">
+        </div>
+    </div>
+</div>
 
 {% endblock %}
