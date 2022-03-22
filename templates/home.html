@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-fluid px-5">
+<div class="container-fluid px-5 h-100">
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <h2 class="mt-3 text-light">D.C. Crime Statistics</h2>
@@ -23,22 +23,32 @@
         <div class="col-md-4 col-sm-12 text-light">
             <h3 class="mt-3 ">About</h3>
             <p class="mt-5">
-                Annual homicides have almost doubled in DC in the past 5 years. This simple web page is
-                intended to bring greater transparency to this issue.
+                There were 226 homicides in Washington DC in 2021. The homicide rate in DC has nearly doubled over the
+                last 5 years. This simple web page is
+                intended to bring greater transparency to amount of violent crime in DC.
             </p>
             <p>
                 The numbers displayed on this page are derived by collecting alerts sent out by
-                the DC Police Department on Twitter. They are aggregated daily and shown here only as a means of greater
+                the DC Police Department on Twitter. These Tweets are then parsed for key words and labeled accordingly.
+                They are aggregated daily and shown here only as a means of greater
                 transparency.
-                For official stats please visit the Metropolitan Police Deparment's offical website.
+                These numbers are a rough estimate of the total occurances. For official stats please visit the
+                <a href="https://mpdc.dc.gov/page/district-crime-data-glance" style="color: lightblue;">Metropolitan
+                    Police
+                    Deparment's website
+                </a>.
             </p>
-            <p>
-                Last updated: {{most_recent_date}}
+            <p class="mb-5">
+                <strong>Last updated:</strong> {{most_recent_date}}
             </p>
-
         </div>
         <div class="col-md-4 col-sm-12">
         </div>
+    </div>
+    <div class="navbar fixed-bottom">
+        <span class="nav-bar-text px-5">
+            <a href="https://github.com/mattambrogi/dc-crime" class="text-muted mb-0 py-2">View on GitHub</a>
+        </span>
     </div>
 </div>
 
