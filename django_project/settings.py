@@ -19,7 +19,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = [".crimeindc.com", "www.crimeindc.com", ".herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["crimeindc.com", "www.crimeindc.com", ".herokuapp.com", "localhost", "127.0.0.1"]
 
 # Tweepy token
 BEARER_TOKEN = env.str("BEARER_TOKEN")
